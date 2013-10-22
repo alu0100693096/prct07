@@ -1,4 +1,4 @@
-require "lib/frac_main.rb"
+require "lib/fraccion.rb"
 
 describe Fraccion do
 
