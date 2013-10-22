@@ -1,6 +1,6 @@
 class Fraccion
-	attr_reader :n
-	def initialize(n)
-		@n = n
+	attr_reader :n, :d
+	def initialize(n,d)
+		@n,@d = n,d
 	end
 end
