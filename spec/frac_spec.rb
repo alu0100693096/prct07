@@ -14,14 +14,14 @@ describe Fraccion do
         end
         #Debe existir un denominador
         it "Hay denominador" do
-            @f1.d.should eq(1)
+            @f1.denom.should eq(1)
         end
     end
 
     it "Debe estar en su forma reducida" do
         f2 = Fraccion.new(2, 4)
         f2.num.should eq(1)
-        f2.d.should eq(2)
+        f2.denom.should eq(2)
     end
 
     describe "# Acceso a las variables" do
