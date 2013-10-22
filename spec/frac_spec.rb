@@ -29,5 +29,9 @@ describe Fraccion do
             @f1.num.should eq(1)
             @f2.num.should eq(2)
         end
+        it "Debe permitir el acceso al denominador mediante el metodo denom()" do
+            @f1.denom.should eq(1)
+            @f2.denom.should eq(3)
+        end
     end
 end
