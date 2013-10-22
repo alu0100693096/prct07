@@ -1,7 +1,7 @@
 class Fraccion
-    attr_reader :n, :d
+    attr_reader :num, :d
     def initialize(n,d)
-        @n,@d = n,d
+        @num,@d = n,d
         reducir
     end
 
@@ -13,15 +13,15 @@ private
         # Si alguno es negativo, que sea el numerador. Si ambos son negativos,
         # se pasan a positivos.
         if @d < 0
-            @n = -@n
+            @num = -@num
             @d = -@d
         end
 
         # Para reducir la fracción se dividen numerador y denominador entre el
         # máximo común divisor de ambos.
-        mcd = gcd(@n, @d)
+        mcd = gcd(@num, @d)
         if mcd != 0
-            @n /= mcd
+            @num /= mcd
             @d /= mcd
         end
     end
