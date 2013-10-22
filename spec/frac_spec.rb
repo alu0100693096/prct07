@@ -10,7 +10,7 @@ describe Fraccion do
     describe "#Comprobacion de variables" do
         #Debe existir un numerador
         it "Hay numerador" do
-            @f1.n.should eq(1)
+            @f1.num.should eq(1)
         end
         #Debe existir un denominador
         it "Hay denominador" do
@@ -20,7 +20,7 @@ describe Fraccion do
 
     it "Debe estar en su forma reducida" do
         f2 = Fraccion.new(2, 4)
-        f2.n.should eq(1)
+        f2.num.should eq(1)
         f2.d.should eq(2)
     end
 
