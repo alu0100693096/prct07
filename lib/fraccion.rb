@@ -5,6 +5,10 @@ class Fraccion
         reducir
     end
 
+    def to_s
+        "#{num}/#{denom}"
+    end
+
 private
 
     # Pasa la fracción actual a su forma más reducida y coloca el signo de la
