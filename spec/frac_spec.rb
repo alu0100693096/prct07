@@ -34,4 +34,11 @@ describe Fraccion do
             @f2.denom.should eq(3)
         end
     end
+
+    describe "# Funciones de conversion" do
+        it "Debe mostrar la fraccion de la forma numerador/denominador" do
+            @f1.to_s.should eq("1/1")
+            @f2.to_s.should eq("2/3")
+        end
+    end
 end
