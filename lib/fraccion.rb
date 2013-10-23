@@ -18,6 +18,10 @@ class Fraccion
         @num == other.num && @denom == other.denom
     end
 
+    def -@
+        Fraccion.new(-@num, @denom)
+    end
+
     def abs
         # En el método initialize se llama a "reducir", así que está
         # garantizado que si es negativo, será el numerador el que tenga el
