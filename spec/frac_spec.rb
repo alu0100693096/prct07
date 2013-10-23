@@ -53,7 +53,9 @@ describe Fraccion do
     end
 
     describe "# Funciones de calculo" do
+	it "Debe calcular el valor absoluto de la función con abs" do
             @f4.abs.should eq(2.0)
+	end
     end
 
 end

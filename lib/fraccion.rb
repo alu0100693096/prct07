@@ -18,6 +18,13 @@ class Fraccion
         @num == other.num && @denom == other.denom
     end
     	
+    def abs
+        if @num < 0
+             @num = -@num
+        end
+        to_float
+        @num/@denom
+    end
 
 private
 
@@ -42,7 +49,12 @@ private
 
     # Calcula el máximo común divisor entre dos números enteros a y b.
     def gcd(a, b)
-        a, b = a.abs, b.abs
+        if a < 0
+		a = -a
+	end
+	if b < 0
+		b = -b
+	end
         while b != 0
             a, b = b, a % b
         end
