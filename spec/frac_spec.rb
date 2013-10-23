@@ -42,20 +42,20 @@ describe Fraccion do
             @f1.to_s.should eq("1/1")
             @f2.to_s.should eq("2/3")
         end
-	it "Debe mostrar la fraccion en formato flotante" do
-	    @f3.to_float
+		it "Debe mostrar la fraccion en formato flotante" do
+	    	@f3.to_float
             @f3.to_s.should eq("5.0/2.0")
-	end
-    end
+    	end
 
-    it "Se debe comparar si dos fracciones son iguales con ==" do
+    	it "Se debe comparar si dos fracciones son iguales con ==" do
             @f3.==(Fraccion.new(10,4)).should eq(true)
+    	end
     end
 
     describe "# Funciones de calculo" do
-	it "Debe calcular el valor absoluto de la función con abs" do
+		it "Debe calcular el valor absoluto de la funcion con abs" do
             @f4.abs.should eq(2.0)
-	end
+    	end
     end
 
 end
