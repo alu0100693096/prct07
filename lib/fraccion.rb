@@ -9,21 +9,20 @@ class Fraccion
         "#{num}/#{denom}"
     end
 
-    def to_float
-        @num, @denom = @num.to_f, @denom.to_f 
-	#to_f pasa a numero flotante.
+    def to_f
+        # to_f pasa a número flotante
+        (@num.to_f/@denom.to_f)
     end
 
     def ==(other)
         @num == other.num && @denom == other.denom
     end
-    	
+
     def abs
-        if @num < 0
-             @num = -@num
-        end
-        to_float
-        @num/@denom
+        # En el método initialize se llama a "reducir", así que está
+        # garantizado que si es negativo, será el numerador el que tenga el
+        # signo.
+        Fraccion.new(num.abs, denom)
     end
 
 private
