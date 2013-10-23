@@ -49,12 +49,7 @@ private
 
     # Calcula el máximo común divisor entre dos números enteros a y b.
     def gcd(a, b)
-        if a < 0
-		a = -a
-	end
-	if b < 0
-		b = -b
-	end
+        a,b = a.abs, b.abs
         while b != 0
             a, b = b, a % b
         end
