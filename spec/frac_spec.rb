@@ -6,6 +6,7 @@ describe Fraccion do
         @f1 = Fraccion.new(1,1)
         @f2 = Fraccion.new(2,3)
 	@f3 = Fraccion.new(5,2)
+	@f4 = Fraccion.new(-12,6)
     end
 
     describe "#Comprobacion de variables" do
@@ -48,6 +49,10 @@ describe Fraccion do
 
     it "Se debe comparar si dos fracciones son iguales con ==" do
             @f3.==(Fraccion.new(10,4)).should eq(true)
+    end
+
+    describe "# Funciones de calculo" do
+            @f4.abs.should eq(2)
     end
 
 end
