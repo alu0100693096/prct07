@@ -9,6 +9,10 @@ class Fraccion
         "#{num}/#{denom}"
     end
 
+    def to_float
+        (num.to_f/denom) #to_f pasa a numero flotante. Flotante/entero = flotante. Sin esta funcion, la división daría un entero, truncando el decimal.
+    end
+
 private
 
     # Pasa la fracción actual a su forma más reducida y coloca el signo de la
