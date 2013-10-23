@@ -52,6 +52,11 @@ describe Fraccion do
             @f3.==(Fraccion.new(10,4)).should eq(true)
             (@f3 == @f2).should_not eq(true)
         end
+
+        it "Debe calcular el reciproco de una fraccion" do
+            @f2.rec.should eq(Fraction.new(3,2))
+            @f4.rec.should eq(-1,2)
+        end
     end
 
     describe "# Funciones de calculo" do
