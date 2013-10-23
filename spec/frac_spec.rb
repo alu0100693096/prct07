@@ -57,6 +57,11 @@ describe Fraccion do
             @f2.rec.should eq(Fraccion.new(3,2))
             @f4.rec.should eq(Fraccion.new(-1,2))
         end
+
+        it "Debe poder calcular el opuesto de una fraccion" do
+            (-@f1).should eq(Fraccion.new(-1,1))
+            (-@f4).should eq(Fraccion.new(12,6))
+        end
     end
 
     describe "# Funciones de calculo" do
