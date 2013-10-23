@@ -5,22 +5,23 @@ describe Fraccion do
     before :each do
         @f1 = Fraccion.new(1,1)
         @f2 = Fraccion.new(2,3)
-	@f3 = Fraccion.new(5,2)
-	@f4 = Fraccion.new(-12,6)
+        @f3 = Fraccion.new(5,2)
+        @f4 = Fraccion.new(-12,6)
     end
 
-    describe "#Comprobacion de variables" do
+    describe "# Comprobacion de variables" do
         #Debe existir un numerador
         it "Hay numerador" do
-            @f1.num.should eq(1)
+            @f1.should respond_to :num
         end
         #Debe existir un denominador
         it "Hay denominador" do
-            @f1.denom.should eq(1)
+            @f1.should respond_to :denom
         end
     end
 
     it "Debe estar en su forma reducida" do
+        # 2/4 == 1/2
         f2 = Fraccion.new(2, 4)
         f2.num.should eq(1)
         f2.denom.should eq(2)
@@ -42,20 +43,21 @@ describe Fraccion do
             @f1.to_s.should eq("1/1")
             @f2.to_s.should eq("2/3")
         end
-		it "Debe mostrar la fraccion en formato flotante" do
-	    	@f3.to_float
-            @f3.to_s.should eq("5.0/2.0")
-    	end
+        it "Debe mostrar la fraccion en formato flotante" do
+            @f1.to_f.should eq(1.0)
+            @f3.to_f.should eq(2.5)
+        end
 
-    	it "Se debe comparar si dos fracciones son iguales con ==" do
+        it "Se debe comparar si dos fracciones son iguales con ==" do
             @f3.==(Fraccion.new(10,4)).should eq(true)
-    	end
+            (@f3 == @f2).should_not eq(true)
+        end
     end
 
     describe "# Funciones de calculo" do
-		it "Debe calcular el valor absoluto de la funcion con abs" do
-            @f4.abs.should eq(2.0)
-    	end
+        it "Debe calcular el valor absoluto de la funcion con abs" do
+            @f4.abs.should eq(Fraccion.new(12,6))
+        end
     end
 
 end
