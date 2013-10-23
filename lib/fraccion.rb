@@ -10,7 +10,8 @@ class Fraccion
     end
 
     def to_float
-        (num.to_f/denom) #to_f pasa a numero flotante. Flotante/entero = flotante. Sin esta funcion, la división daría un entero, truncando el decimal.
+        @num, @denom = @num.to_f, @denom.to_f 
+	#to_f pasa a numero flotante.
     end
 
     def ==(other)

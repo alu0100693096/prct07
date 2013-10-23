@@ -43,7 +43,8 @@ describe Fraccion do
             @f2.to_s.should eq("2/3")
         end
 	it "Debe mostrar la fraccion en formato flotante" do
-	    @f3.to_float.should eq(2.5)
+	    @f3.to_float
+            @f3.to_s.should eq("5.0/2.0")
 	end
     end
 
@@ -52,7 +53,7 @@ describe Fraccion do
     end
 
     describe "# Funciones de calculo" do
-            @f4.abs.should eq(2)
+            @f4.abs.should eq(2.0)
     end
 
 end
