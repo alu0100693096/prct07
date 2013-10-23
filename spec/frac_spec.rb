@@ -45,4 +45,9 @@ describe Fraccion do
 	    @f3.to_float.should eq(2.5)
 	end
     end
+
+    it "Se debe comparar si dos fracciones son iguales con ==" do
+            @f3.==(Fraccion.new(10,4)).should eq(true)
+    end
+
 end
