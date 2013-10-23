@@ -22,7 +22,12 @@ class Fraccion
         # En el método initialize se llama a "reducir", así que está
         # garantizado que si es negativo, será el numerador el que tenga el
         # signo.
-        Fraccion.new(num.abs, denom)
+        Fraccion.new(@num.abs, @denom)
+    end
+
+    def rec
+        # Damos la vuelta a la fracción.
+        Fraccion.new(@denom, @num)
     end
 
 private

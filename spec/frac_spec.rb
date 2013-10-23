@@ -54,8 +54,8 @@ describe Fraccion do
         end
 
         it "Debe calcular el reciproco de una fraccion" do
-            @f2.rec.should eq(Fraction.new(3,2))
-            @f4.rec.should eq(-1,2)
+            @f2.rec.should eq(Fraccion.new(3,2))
+            @f4.rec.should eq(Fraccion.new(-1,2))
         end
     end
 
