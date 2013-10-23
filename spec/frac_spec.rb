@@ -5,6 +5,7 @@ describe Fraccion do
     before :each do
         @f1 = Fraccion.new(1,1)
         @f2 = Fraccion.new(2,3)
+	@f3 = Fraccion.new(5,2)
     end
 
     describe "#Comprobacion de variables" do
@@ -40,5 +41,8 @@ describe Fraccion do
             @f1.to_s.should eq("1/1")
             @f2.to_s.should eq("2/3")
         end
+	it "Debe mostrar la fraccion en formato flotante" do
+	    @f3.to_f.should eq(2.5)
+	end
     end
 end
