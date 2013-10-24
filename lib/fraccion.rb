@@ -18,6 +18,11 @@ class Fraccion
         @num == other.num && @denom == other.denom
     end
 
+    def +(other)
+        d = @denom * other.denom
+        Fraccion.new((d/@denom)*@num + (d/other.denom)*other.num, d)
+    end
+
     def -@
         Fraccion.new(-@num, @denom)
     end
