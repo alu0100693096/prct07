@@ -28,6 +28,10 @@ class Fraccion
         Fraccion.new((d/@denom)*@num - (d/other.denom)*other.num, d)
     end
 
+    def *(other)
+        Fraccion.new(@num*other.num, @denom*other.denom)
+    end
+
     def -@
         Fraccion.new(-@num, @denom)
     end
