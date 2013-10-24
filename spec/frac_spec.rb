@@ -90,4 +90,8 @@ describe Fraccion do
         end
     end
 
+    describe "# Funciones de comparacion" do
+        # Formato: @f2.should be < @f3 ...
+    end
+
 end
