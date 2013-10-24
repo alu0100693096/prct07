@@ -73,6 +73,11 @@ describe Fraccion do
             (@f2 + @f3).should eq(Fraccion.new(19,6))
             (@f3 + @f4).should eq(Fraccion.new(1,2))
         end
+
+        it "Debe hacer la resta entre dos fracciones y dar el resultado reducido" do
+            (@f2 - @f3).should eq(Fraccion.new(-11,6))
+            (@f3 - @f4).should eq(Fraccion.new(9,2))
+        end
     end
 
 end
