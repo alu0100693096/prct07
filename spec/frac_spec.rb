@@ -79,9 +79,14 @@ describe Fraccion do
             (@f3 - @f4).should eq(Fraccion.new(9,2))
         end
 
-        it "Debe hacer el product entre dos fracciones y dar el resultado reducido" do
+        it "Debe hacer el producto entre dos fracciones y dar el resultado reducido" do
             (@f2 * @f3).should eq(Fraccion.new(5,3))
             (@f3 * @f4).should eq(Fraccion.new(-5,1))
+        end
+
+        it "Debe hacer el cociente entre dos fracciones y dar el resultado reducido" do
+            (@f2 / @f3).should eq(Fraccion.new(4,15))
+            (@f3 / @f4).should eq(Fraccion.new(-15,12))
         end
     end
 
