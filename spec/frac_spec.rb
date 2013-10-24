@@ -48,11 +48,6 @@ describe Fraccion do
             @f3.to_f.should eq(2.5)
         end
 
-        it "Se debe comparar si dos fracciones son iguales con ==" do
-            @f3.==(Fraccion.new(10,4)).should eq(true)
-            (@f3 == @f2).should_not eq(true)
-        end
-
         it "Debe calcular el reciproco de una fraccion" do
             @f2.rec.should eq(Fraccion.new(3,2))
             @f4.rec.should eq(Fraccion.new(-1,2))
@@ -92,6 +87,15 @@ describe Fraccion do
 
     describe "# Funciones de comparacion" do
         # Formato: @f2.should be < @f3 ...
+	it "Se debe comparar si dos fracciones son iguales con ==" do
+            @f3.==(Fraccion.new(10,4)).should eq(true)
+            (@f3 == @f2).should_not eq(true)
+        end
+        it "Se debe de poder comprobar si una fraccion es menor que otra" do
+            @f2.should be < @f1
+            @f3.should_not be < @f4
+        end
+
     end
 
 end
