@@ -2,7 +2,7 @@ require "lib/fraccion.rb"
 
 describe Fraccion do
 
-    before :each do
+    before :all do
         @f1 = Fraccion.new(1,1)
         @f2 = Fraccion.new(2,3)
         @f3 = Fraccion.new(5,2)
@@ -77,6 +77,11 @@ describe Fraccion do
         it "Debe hacer la resta entre dos fracciones y dar el resultado reducido" do
             (@f2 - @f3).should eq(Fraccion.new(-11,6))
             (@f3 - @f4).should eq(Fraccion.new(9,2))
+        end
+
+        it "Debe hacer el product entre dos fracciones y dar el resultado reducido" do
+            (@f2 * @f3).should eq(Fraccion.new(5,3))
+            (@f3 * @f4).should eq(Fraccion.new(-5,1))
         end
     end
 
