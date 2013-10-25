@@ -83,6 +83,12 @@ describe Fraccion do
             (@f2 / @f3).should eq(Fraccion.new(4,15))
             (@f3 / @f4).should eq(Fraccion.new(-15,12))
         end
+
+        it "Debe calcular el resto de 2 fracciones con % y dar el resultado de forma reducida" do
+            f5 = Fraccion.new(0, 1)
+            (@f2 % @f3).should eq(f5)
+            (@f4 % @f1).should eq(f5)
+        end
     end
 
     describe "# Funciones de comparacion" do
