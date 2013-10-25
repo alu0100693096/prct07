@@ -11,6 +11,6 @@ task :test do
 end
 
 desc "Ejecutar tests y producir documentacion HTML"
-task :html do
+task :thtml do
   sh "rspec -I. spec/frac_spec.rb --format html"
 end
