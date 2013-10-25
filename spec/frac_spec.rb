@@ -90,11 +90,16 @@ describe Fraccion do
             @f3.==(Fraccion.new(10,4)).should eq(true)
             (@f3 == @f2).should_not eq(true)
         end
+
         it "Se debe de poder comprobar si una fraccion es menor que otra" do
             @f2.should be < @f1
             @f3.should_not be < @f4
         end
 
+        it "Se debe de poder comprobar si una fraccion es mayor que otra" do
+            @f2.should be > @f4
+            @f3.should be > @f1
+        end
     end
 
 end
