@@ -2,7 +2,7 @@ task :default => :bin
 
 desc "Ejecutar el programa principal"
 task :bin do
-  sh "ruby lib/frac_main.rb"
+  sh "ruby -I. lib/frac_main.rb"
 end
 
 desc "Ejecutar tests sobre la clase Fraccion"
