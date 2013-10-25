@@ -120,4 +120,13 @@ describe Fraccion do
         end
     end
 
+    describe "# Operaciones conjuntas" do
+        it "Debe permitir ejecutar operaciones conjuntas" do
+            if (@f2 % @f3) == Fraccion.new(0,1)
+                (-@f2 * @f3).abs.should eq(Fraccion.new(5, 3))
+            else
+                0.should eq(0)
+            end
+        end
+    end
 end
