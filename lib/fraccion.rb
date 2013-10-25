@@ -25,6 +25,11 @@ class Fraccion
         (d/@denom)*@num < (d/other.denom)*other.num
     end
 
+    def >(other)
+        d = @denom * other.denom
+        (d/@denom)*@num > (d/other.denom)*other.num
+    end
+
     # OPERACIONES ARITMÉTICAS
     def +(other)
         d = @denom * other.denom
