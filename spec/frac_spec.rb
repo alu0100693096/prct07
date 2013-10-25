@@ -100,6 +100,12 @@ describe Fraccion do
             @f2.should be > @f4
             @f3.should be > @f1
         end
+
+        it "Se debe de poder comprobar si una fraccion es menor o igual que otra" do
+            @f1.should_not be <= @f2
+            @f3.should be <= @f3
+            @f3.should_not be <= @f1
+        end
     end
 
 end
