@@ -86,8 +86,7 @@ describe Fraccion do
     end
 
     describe "# Funciones de comparacion" do
-        # Formato: @f2.should be < @f3 ...
-	it "Se debe comparar si dos fracciones son iguales con ==" do
+        it "Se debe comparar si dos fracciones son iguales con ==" do
             @f3.==(Fraccion.new(10,4)).should eq(true)
             (@f3 == @f2).should_not eq(true)
         end

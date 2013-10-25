@@ -5,6 +5,7 @@ class Fraccion
         reducir
     end
 
+    # OPERACIONES DE CONVERSIÓN
     def to_s
         "#{num}/#{denom}"
     end
@@ -14,10 +15,17 @@ class Fraccion
         (@num.to_f/@denom.to_f)
     end
 
+    # OPERACIONES DE COMPARACIÓN
     def ==(other)
         @num == other.num && @denom == other.denom
     end
 
+    def <(other)
+        d = @denom * other.denom
+        (d/@denom)*@num < (d/other.denom)*other.num
+    end
+
+    # OPERACIONES ARITMÉTICAS
     def +(other)
         d = @denom * other.denom
         Fraccion.new((d/@denom)*@num + (d/other.denom)*other.num, d)
@@ -40,6 +48,7 @@ class Fraccion
         Fraccion.new(-@num, @denom)
     end
 
+    # OTRAS OPERACIONES
     def abs
         # En el método initialize se llama a "reducir", así que está
         # garantizado que si es negativo, será el numerador el que tenga el
