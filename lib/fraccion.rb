@@ -1,5 +1,7 @@
 class Fraccion
+    include Comparable
     attr_reader :num, :denom
+
     def initialize(n,d)
         @num, @denom = n, d
         reducir
@@ -16,28 +18,9 @@ class Fraccion
     end
 
     # OPERACIONES DE COMPARACIÓN
-    def ==(other)
-        @num == other.num && @denom == other.denom
-    end
-
-    def <(other)
+    def <=>(other)
         d = @denom * other.denom
-        (d/@denom)*@num < (d/other.denom)*other.num
-    end
-
-    def >(other)
-        d = @denom * other.denom
-        (d/@denom)*@num > (d/other.denom)*other.num
-    end
-
-    def <=(other)
-        d = @denom * other.denom
-        (d/@denom)*@num <= (d/other.denom)*other.num
-    end
-
-    def >=(other)
-        d = @denom * other.denom
-        (d/@denom)*@num >= (d/other.denom)*other.num
+        (d/@denom)*@num <=> (d/other.denom)*other.num
     end
 
     # OPERACIONES ARITMÉTICAS
