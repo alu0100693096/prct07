@@ -3,7 +3,7 @@ class Fraccion
     attr_reader :num, :denom
 
     def initialize(n,d)
-        raise 'El denominador no puede ser 0' unless d != 0
+        raise(ZeroDivisionError, 'El denominador no puede ser 0') unless d != 0
         @num, @denom = n, d
 
         if n == 0
