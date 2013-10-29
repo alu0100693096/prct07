@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+	- 1.9.3
+	- jruby-18mode # JRuby en modo 1.8
+	- jruby-19mode # JRuby en modo 1.9
+	- rbx-18mode
+	- rbx-19mode
+	- 1.8.7
