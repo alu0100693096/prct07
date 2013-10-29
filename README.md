@@ -1,4 +1,6 @@
-﻿Clase escrita en Ruby para representar fracciones.
+﻿# Fracción [![Build Status](https://travis-ci.org/alu0100700459/prct07.png?branch=master)](https://travis-ci.org/alu0100700459/prct07)
+
+Clase escrita en Ruby para representar fracciones.
 
 Para ejecutar, utilizar el Rakefile incluido. Objetivos del Rakefile:
 
